@@ -4,7 +4,7 @@ using HarmonyLib;
 
 namespace Use_Equipment_in_Water
 {
-    [BepInPlugin("com.lvh-it.valheim.useequipmentinwater", "Use Equipment in Water", "0.1.0.0")]
+    [BepInPlugin("com.lvh-it.valheim.useequipmentinwater", "Use Equipment in Water", "0.1.1.0")]
     [BepInProcess("valheim.exe")]
     class UseEquipmentInWater : BaseUnityPlugin
     {
@@ -24,7 +24,8 @@ namespace Use_Equipment_in_Water
         {
             string callerName = (new System.Diagnostics.StackTrace()).GetFrame(2).GetMethod().Name;
             
-            if ((callerName.Contains("EquipItem") || callerName.Contains("UpdateEquipment")) &&  __instance.IsPlayer())
+            
+            if (callerName != "patchUpdateEquipment" && (callerName.Contains("EquipItem") || callerName.Contains("UpdateEquipment")) &&  __instance.IsPlayer())
             {
                 __result = false;
                 return false;
