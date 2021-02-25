@@ -1,4 +1,5 @@
 ﻿using BepInEx;
+using BepInEx.Logging;
 using HarmonyLib;
 
 namespace Use_Equipment_in_Water
@@ -7,17 +8,23 @@ namespace Use_Equipment_in_Water
     [BepInProcess("valheim.exe")]
     class UseEquipmentInWater : BaseUnityPlugin
     {
+        private static ManualLogSource logger;
+
         void Main()
         {
+            logger = Logger;
             Harmony.CreateAndPatchAll(typeof(UseEquipmentInWater));
         }
+
+        
 
         [HarmonyPatch(typeof(Character), "IsSwiming")]
         [HarmonyPrefix]
         static bool patchIsSwim(Humanoid __instance, ref bool __result)
         {
             string callerName = (new System.Diagnostics.StackTrace()).GetFrame(2).GetMethod().Name;
-            if ((callerName == "DMD<Humanoid::EquipItem>" || callerName == "UpdateEquipment") && __instance.IsPlayer())
+            
+            if ((callerName.Contains("EquipItem") || callerName.Contains("UpdateEquipment")) &&  __instance.IsPlayer())
             {
                 __result = false;
                 return false;

@@ -1,5 +1,5 @@
 ﻿# Use Equipment in Water for Valheim
-This Bepinex mod allows you to use all of your equipment and tools while swimming in the water.  
+This Bepinex mod allows you to use all of your equipment and tools while swimming in water.  
 
 ## Installation (automatic)
 1. Install this mod manager: [r2modman](https://valheim.thunderstore.io/package/ebkr/r2modman/)  
