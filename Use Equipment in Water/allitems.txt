@@ -1,0 +1,375 @@
+﻿$item_amber
+$item_amberpearl
+$item_ancientseed
+$item_chest_bronze
+$item_legs_bronze
+$item_chest_iron
+$item_legs_iron
+$item_chest_leather
+$item_legs_leather
+$item_chest_pcuirass
+$item_legs_pgreaves
+$item_chest_rags
+$item_legs_rags
+$item_chest_trollleather
+$item_legs_trollleather
+$item_chest_wolf
+$item_legs_wolf
+$item_arrow_bronze
+$item_arrow_fire
+$item_arrow_flint
+$item_arrow_frost
+$item_arrow_iron
+$item_arrow_needle
+$item_arrow_obsidian
+$item_arrow_poison
+$item_arrow_silver
+$item_arrow_wood
+$item_atgeir_blackmetal
+$item_atgeir_bronze
+$item_atgeir_iron
+$item_axe_blackmetal
+$item_axe_bronze
+$item_axe_flint
+$item_axe_iron
+$item_axe_stone
+$item_barley
+$item_barleyflour
+$item_barleywine
+$item_barleywinebase
+$item_battleaxe
+$customization_beard01
+$customization_beard10
+$customization_beard02
+$customization_beard03
+$customization_beard04
+$customization_beard05
+$customization_beard06
+$customization_beard07
+$customization_beard08
+$customization_beard09
+$customization_nobeard
+$item_beechseeds
+$item_beltstrength
+$item_blackmetal
+$item_blackmetalscrap
+fart
+fart
+$item_bloodbag
+$item_bloodpudding
+$item_blueberries
+boar attack1
+$item_oozebomb
+$item_bonefragments
+heal
+slap
+heal
+slime throw
+$item_bow
+$item_bow_draugrfang
+$item_bow_finewood
+$item_bow_huntsman
+$item_bread
+$item_bronze
+$item_bronzenails
+$item_cape_deerhide
+$item_cape_linen
+$item_cape_lox
+$item_cape_odin
+CAPE TEST
+$item_cape_trollhide
+$item_cape_wolf
+$item_carrot
+$item_carrotseeds
+$item_carrotsoup
+$item_chain
+$item_chitin
+$item_cloudberries
+$item_club
+$item_coal
+$item_coins
+$item_loxmeat_cooked
+$item_meat_cooked
+$item_copper
+$item_copperore
+$item_cryptkey
+$item_crystal
+$item_cultivator
+$item_dandelion
+Wraith melee
+$item_deerhide
+Dragon claw left
+Dragon claw left
+Dragon claw left
+dragon breath
+dragon breath
+cold ball
+scream
+$item_dragonegg
+$item_dragontear
+Ironhead arrow
+Dragur axe
+Bow
+Dragur axe
+StagAttack1
+StagAttack2
+StagAttack1
+slap
+$item_elderbark
+$item_entrails
+$item_feathers
+claw
+claw
+scream
+$item_finewood
+$item_fircone
+$item_fish_cooked
+$item_fishingbait
+$item_fishingrod
+$item_fish_raw
+$item_fishwraps
+$item_flametal
+$item_flametalore
+$item_flax
+$item_flint
+$item_freezegland
+jaws
+spawn
+scream
+shaman attack
+jaws
+jaws
+Iron plate armor
+Iron plate armor
+Brute sword
+Iron plate armor
+Iron plate armor
+Iron plate armor
+Iron plate armor
+Brute sword
+Iron plate armor
+Brute taunt
+Club
+Iron plate armor
+dragon breath
+spawn
+slap
+scream
+Iron plate armor
+Iron plate armor
+fireballattack
+Club
+heal
+Club
+Club
+Club
+Club
+Iron plate armor
+Flint spear
+Bronze sword
+Torch
+$item_goblintotem
+jaws
+jaws
+shaman attack
+heal
+throw stone
+$item_greydwarfeye
+jaws
+$item_guck
+$customization_hair01
+$customization_hair10
+$customization_hair11
+$customization_hair12
+$customization_hair13
+$customization_hair14
+$customization_hair02
+$customization_hair03
+$customization_hair04
+$customization_hair05
+$customization_hair06
+$customization_hair07
+$customization_hair08
+$customization_hair09
+$customization_nohair
+$item_hammer
+$item_hardantler
+cold ball
+Bonemass heart
+Elder heart
+$item_helmet_bronze
+$item_helmet_drake
+$item_helmet_dverger
+$item_helmet_iron
+$item_helmet_leather
+$item_helmet_odin
+$item_helmet_padded
+$item_helmet_trollleather
+$item_helmet_yule
+$item_hoe
+$item_honey
+fireballattack
+$item_iron
+$item_ironnails
+$item_ironore
+$item_ironscrap
+$item_knife_blackmetal
+$item_knife_chitin
+$item_knife_copper
+$item_knife_flint
+$item_leatherscraps
+jaws
+$item_linenthread
+lox bite
+slap
+$item_loxmeat
+$item_loxpelt
+$item_loxpie
+$item_mace_bronze
+$item_mace_iron
+$item_mace_needle
+$item_mace_silver
+$item_meadbasefrostresist
+$item_meadbasehealth_medium
+$item_meadbasehealth
+$item_meadbasepoisonresist
+$item_meadbasestamina_medium
+$item_meadbasestamina
+$item_meadbasetasty
+$item_mead_frostres
+$item_mead_hp_medium
+$item_mead_hp_minor
+$item_mead_poisonres
+$item_mead_stamina_medium
+$item_mead_stamina_minor
+$item_mead_tasty
+$item_mushroomcommon
+$item_mushroomblue
+$item_mushroomyellow
+jaws
+$item_necktail
+$item_necktailgrilled
+$item_needle
+$item_obsidian
+$item_ooze
+$item_pickaxe_antler
+$item_pickaxe_bronze
+$item_pickaxe_iron
+$item_pickaxe_stone
+$item_pinecone
+Unarmed
+$item_queenbee
+$item_queensjam
+$item_raspberries
+$item_meat_raw
+$item_resin
+$item_roundlog
+$item_ruby
+$item_sausages
+Serpent bite
+Serpent Taunt
+$item_serpentmeat
+$item_serpentmeatcooked
+$item_serpentscale
+$item_serpentstew
+$item_sharpeningstone
+$item_shield_banded
+$item_shield_blackmetal
+$item_shield_blackmetal_tower
+$item_shield_bronzebuckler
+$item_shield_iron_square
+$item_shield_iron_tower
+Knight shield
+$item_shield_serpentscale
+$item_shield_silver
+$item_shield_wood
+$item_shield_woodtower
+$item_silver
+$item_silvernecklace
+$item_silverore
+Bow
+Dragur axe
+Dragur axe
+$item_sledge_iron
+$item_stagbreaker
+$item_spear_bronze
+$item_spear_chitin
+$item_spear_ancientbark
+$item_spear_flint
+$item_spear_wolffang
+Stamina Greydwarf
+Stamina Troll
+Stamina Wraith
+$item_stone
+slap
+slap
+Spike attack
+One hand ground slam
+Spike sweep
+$item_surtlingcore
+$item_sword_blackmetal
+$item_sword_bronze
+Cheat sword
+$item_sword_iron
+$item_sword_fire
+$item_sword_silver
+$item_tankard
+$item_tankard_odin
+Dragur axe
+$item_thistle
+$item_tin
+$item_tinore
+$item_torch
+slap
+LOG
+LOG
+slap
+fireballattack
+$item_trollhide
+$item_trophy_blob
+$item_trophy_boar
+$item_trophy_bonemass
+$item_trophy_deathsquito
+$item_trophy_deer
+$item_trophy_dragonqueen
+$item_trophy_draugr
+$item_trophy_draugrelite
+$item_trophy_draugr
+$item_trophy_eikthyr
+$item_trophy_fenring
+$item_trophy_troll
+$item_trophy_troll
+$item_trophy_goblin
+$item_trophy_goblinbrute
+$item_trophy_goblinking
+$item_trophy_goblinshaman
+$item_trophy_greydwarf
+$item_trophy_greydwarfbrute
+$item_trophy_greydwarfshaman
+$item_trophy_hatchling
+$item_trophy_leech
+$item_trophy_lox
+$item_trophy_neck
+$item_trophy_serpent
+$item_trophy_sgolem
+$item_trophy_skeleton
+$item_trophy_skeletonpoison
+$item_trophy_surtling
+$item_trophy_elder
+$item_trophy_wolf
+$item_trophy_wraith
+$item_turnip
+$item_turnipseeds
+$item_turnipstew
+Yagluth thing
+$item_wishbone
+$item_witheredbone
+WolfAttack1
+WolfAttack2
+WolfAttack3
+$item_wolffang
+$item_wolfpelt
+$item_wood
+Wraith melee
+Yagluth thing
+$item_ymirremains
