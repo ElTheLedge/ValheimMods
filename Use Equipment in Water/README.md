@@ -14,7 +14,7 @@ You can also choose which items are usable in water by editing the config file a
 
 ## Configuration
 The config file allows you to decide which items you want to be usable in water which you do not want to be usable.  
-It can be accessed though the following methods  
+It can be accessed through the following methods  
 ### When using the r2modman mod manger:
 The config file can be editied from within the mod manager via the "Config Editor" menu  
 
