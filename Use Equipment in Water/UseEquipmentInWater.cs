@@ -6,18 +6,23 @@ using System.Collections.Generic;
 
 namespace Use_Equipment_in_Water
 {
-    [BepInPlugin("com.lvh-it.valheim.useequipmentinwater", "Use Equipment in Water", "0.2.0.0")]
+    [BepInPlugin("com.lvh-it.valheim.useequipmentinwater", "Use Equipment in Water", "0.2.1.0")]
     [BepInProcess("valheim.exe")]
+    [BepInProcess("valheim.x86_64")]
     class UseEquipmentInWater : BaseUnityPlugin
     {
-        private static ManualLogSource logger;
+        //Used for debugging
+        //
+        //private static ManualLogSource logger;
         private List<ConfigEntry<bool>> configEntries = new List<ConfigEntry<bool>>();
         private static List<string> deniedItems = new List<string>();
         private Items itemList = new Items();
 
         void Main()
         {
-            logger = Logger;
+            //Used for debugging
+            //
+            //logger = Logger;
 
             configEntries.Add(Config.Bind("ItemsToAllow", "allowAxes", true, "Allow axes to be used in Water"));
             configEntries.Add(Config.Bind("ItemsToAllow", "allowBows", true, "Allow bows to be used in Water"));
@@ -51,17 +56,6 @@ namespace Use_Equipment_in_Water
             Harmony.CreateAndPatchAll(typeof(UseEquipmentInWater));
         }
 
-        [HarmonyPatch(typeof(Humanoid), "EquipItem")]
-        [HarmonyPrefix]
-        static bool patchEquipItem(Humanoid __instance, ref ItemDrop.ItemData item)
-        {
-            if (__instance.IsSwiming() && __instance.IsPlayer() && deniedItems.Contains(item.m_shared.m_name))
-            {
-                return false;
-            }
-            return true;
-        }
-
         //Used this to get all the item name strings
         //
         /*[HarmonyPatch(typeof(ObjectDB), "UpdateItemHashes")]
@@ -75,39 +69,65 @@ namespace Use_Equipment_in_Water
                 }
         }*/
 
-        [HarmonyPatch(typeof(Humanoid), "UpdateEquipment")]
-        [HarmonyPrefix]
-        static bool patchUpdateEquipment(Humanoid __instance)
-        {
-            if (__instance.IsSwiming() && __instance.IsPlayer()
-                && ((__instance.GetRightItem() != null && deniedItems.Contains(__instance.GetRightItem().m_shared.m_name))
-                || (__instance.GetLeftItem() != null && deniedItems.Contains(__instance.GetLeftItem().m_shared.m_name))))
-            {
-                __instance.HideHandItems();
-                return false;
-            }
-            return true;
-        }
+        //Used for debugging
+        //
+        //static string lastCallerNames = "";
 
         [HarmonyPatch(typeof(Character), "IsSwiming")]
         [HarmonyPrefix]
-        static bool patchIsSwim(Humanoid __instance, ref bool __result)
+        static bool patchIsSwim(ref bool __result, Humanoid __instance, float ___m_swimTimer)
         {
-            string callerName = (new System.Diagnostics.StackTrace()).GetFrame(2).GetMethod().Name;
-
-            //Used this for testing
-            //
-            /*if (__instance.IsPlayer() && callerName.Contains("Equip"))
+            if (___m_swimTimer < 0.5f)
             {
-                logger.LogInfo(callerName);
-            }*/
+                System.Diagnostics.StackTrace st = new System.Diagnostics.StackTrace();
+                string callerNames = "";
+                for (int x = 2; x < st.FrameCount && x < 10; x++)
+                {
+                    callerNames += st.GetFrame(x).GetMethod().FullDescription() + "-";
+                }
 
-            if (!callerName.Contains("patchEquipItem") && !callerName.Contains("patchUpdateEquipment") && (callerName.Contains("EquipItem") || callerName.Contains("UpdateEquipment")) && __instance.IsPlayer())
-            {
-                __result = false;
-                return false;
+                //Used for debugging
+                //
+                /*if (!callerNames.Contains("OnAnimatorIK") && !callerNames.Contains("UpdateStats") && !callerNames.Contains("RandomMovement"))
+                {
+                    if (callerNames != lastCallerNames)
+                    {
+                        lastCallerNames = callerNames;
+                        logger.LogInfo(callerNames);
+                    }
+                }*/
+
+                if (__instance.IsPlayer() && (callerNames.Contains("UpdateEquipment") || callerNames.Contains("EquipItem")))
+                {
+                    if (
+                       (__instance.GetRightItem() != null && deniedItems.Contains(__instance.GetRightItem().m_shared.m_name))
+                    || (__instance.GetLeftItem() != null && deniedItems.Contains(__instance.GetLeftItem().m_shared.m_name))
+                    )
+                    {
+                        __instance.HideHandItems();
+                    }
+                    __result = false;
+                    return false;
+                }
+
             }
             return true;
         }
+
+
+        //This empty "useless" HarmonyPatch fixed incompatiblity with other mods like KatEdition. I dont understand why this would fix anything but it does
+        [HarmonyPatch(typeof(Humanoid), "EquipItem")]
+        [HarmonyPrefix]
+        static void patchEquipItem()
+        {
+        }
+
+        //This empty HarmonyPatch is just a precaution for possibly existing incompatiblity cases like the ones with the above EquipItem HarmonyPatch
+        [HarmonyPatch(typeof(Humanoid), "UpdateEquipment")]
+        [HarmonyPrefix]
+        static void patchUpdateEquipment()
+        {
+        }
     }
 }
+
