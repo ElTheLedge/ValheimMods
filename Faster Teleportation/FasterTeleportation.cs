@@ -48,13 +48,13 @@ namespace Faster_Teleportation
             }
         }
 
-
+        /*
         [HarmonyPatch(typeof(Player), "TeleportTo")]
         [HarmonyPrefix]
         static void patchUpdateBlackScreen(ref bool distantTeleport)
         {
             distantTeleport = false;
-        }
+        }*/
 
         [HarmonyPatch(typeof(Hud), "UpdateBlackScreen")]
         [HarmonyPrefix]
@@ -62,7 +62,7 @@ namespace Faster_Teleportation
         {
             if (playerIsTeleporting)
             {
-                ___m_loadingScreen.alpha = 0f;
+                ___m_loadingScreen.alpha = 1f;
             }
         }
     }
