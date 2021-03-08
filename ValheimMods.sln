@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Use Equipment in Water", "U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomGrassSettings", "CustomGrassSettings\CustomGrassSettings.csproj", "{159FF93E-FA92-4E7F-AEFF-52C16FD3B5CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Faster Teleportation", "Faster Teleportation\Faster Teleportation.csproj", "{D6E93391-B6E1-495B-BA95-D579B8062F97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{159FF93E-FA92-4E7F-AEFF-52C16FD3B5CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{159FF93E-FA92-4E7F-AEFF-52C16FD3B5CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{159FF93E-FA92-4E7F-AEFF-52C16FD3B5CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6E93391-B6E1-495B-BA95-D579B8062F97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6E93391-B6E1-495B-BA95-D579B8062F97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6E93391-B6E1-495B-BA95-D579B8062F97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6E93391-B6E1-495B-BA95-D579B8062F97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
