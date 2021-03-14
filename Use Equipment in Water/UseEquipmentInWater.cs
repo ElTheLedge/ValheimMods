@@ -1,12 +1,12 @@
 ﻿using BepInEx;
 using BepInEx.Configuration;
-using BepInEx.Logging;
+//using BepInEx.Logging;
 using HarmonyLib;
 using System.Collections.Generic;
 
 namespace Use_Equipment_in_Water
 {
-    [BepInPlugin("com.lvh-it.valheim.useequipmentinwater", "Use Equipment in Water", "0.2.1.0")]
+    [BepInPlugin("com.lvh-it.valheim.useequipmentinwater", "Use Equipment in Water", "0.2.2.0")]
     [BepInProcess("valheim.exe")]
     [BepInProcess("valheim.x86_64")]
     class UseEquipmentInWater : BaseUnityPlugin
@@ -104,7 +104,10 @@ namespace Use_Equipment_in_Water
                     || (__instance.GetLeftItem() != null && deniedItems.Contains(__instance.GetLeftItem().m_shared.m_name))
                     )
                     {
-                        __instance.HideHandItems();
+                        if (!__instance.IsOnGround())
+                        {
+                            __instance.HideHandItems();
+                        }
                     }
                     __result = false;
                     return false;
