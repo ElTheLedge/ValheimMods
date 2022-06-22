@@ -9,7 +9,9 @@ namespace Use_Equipment_in_Water
             "$item_axe_bronze",
             "$item_axe_flint",
             "$item_axe_iron",
-            "$item_axe_stone"});
+            "$item_axe_stone",
+            "$item_battleaxe",
+            "$item_battleaxe_crystal"});
 
         public List<string> allowBows = new List<string>(new string[] {
             "$item_bow",
@@ -24,9 +26,11 @@ namespace Use_Equipment_in_Water
 
         public List<string> allowKnives = new List<string>(new string[] {
             "$item_knife_blackmetal",
+            "$item_knife_butcher",
             "$item_knife_chitin",
             "$item_knife_copper",
-            "$item_knife_flint"});
+            "$item_knife_flint",
+            "$item_knife_silver"});
 
         public List<string> allowMaces = new List<string>(new string[] {
             "$item_mace_bronze",
@@ -39,12 +43,14 @@ namespace Use_Equipment_in_Water
             "$item_shield_blackmetal",
             "$item_shield_blackmetal_tower",
             "$item_shield_bronzebuckler",
-            "$item_shield_iron_square",
-            "$item_shield_iron_tower",
+            "$item_shield_iron_square",
+            "$item_shield_iron_tower",
             "$item_shield_serpentscale",
             "$item_shield_silver",
-            "$item_shield_wood",
-            "$item_shield_woodtower"});
+            "$item_shield_wood",
+            "$item_shield_woodtower",
+            "$item_shield_bonetower",
+            "$item_shield_ironbuckler"});
 
         public List<string> allowSledge = new List<string>(new string[] {
             "$item_sledge_iron"});

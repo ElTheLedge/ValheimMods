@@ -3,10 +3,11 @@ using BepInEx.Configuration;
 //using BepInEx.Logging;
 using HarmonyLib;
 using System.Collections.Generic;
+//using UnityEngine;
 
 namespace Use_Equipment_in_Water
 {
-    [BepInPlugin("com.lvh-it.valheim.useequipmentinwater", "Use Equipment in Water", "0.2.2.0")]
+    [BepInPlugin("com.lvh-it.valheim.useequipmentinwater", "Use Equipment in Water", "0.2.2.2")]
     [BepInProcess("valheim.exe")]
     [BepInProcess("valheim.x86_64")]
     class UseEquipmentInWater : BaseUnityPlugin
@@ -18,12 +19,11 @@ namespace Use_Equipment_in_Water
         private static List<string> deniedItems = new List<string>();
         private Items itemList = new Items();
 
-        void Main()
+        void Awake()
         {
             //Used for debugging
             //
             //logger = Logger;
-
             configEntries.Add(Config.Bind("ItemsToAllow", "allowAxes", true, "Allow axes to be used in Water"));
             configEntries.Add(Config.Bind("ItemsToAllow", "allowBows", true, "Allow bows to be used in Water"));
             configEntries.Add(Config.Bind("ItemsToAllow", "allowAtgeirs", true, "Allow atgeirs to be used in Water"));
@@ -58,11 +58,12 @@ namespace Use_Equipment_in_Water
 
         //Used this to get all the item name strings
         //
-        /*[HarmonyPatch(typeof(ObjectDB), "UpdateItemHashes")]
+        /*
+        [HarmonyPatch(typeof(ObjectDB), "UpdateItemHashes")]
         [HarmonyPostfix]
         static void patchUpdateItemHashes(ObjectDB __instance)
         {
-                foreach(GameObject go in __instance.m_items)
+                foreach (GameObject go in __instance.m_items)
                 {
                     ItemDrop goItem = go.GetComponent<ItemDrop>();
                     logger.LogInfo(goItem.m_itemData.m_shared.m_name);
@@ -88,7 +89,8 @@ namespace Use_Equipment_in_Water
 
                 //Used for debugging
                 //
-                /*if (!callerNames.Contains("OnAnimatorIK") && !callerNames.Contains("UpdateStats") && !callerNames.Contains("RandomMovement"))
+                /*
+                if (!callerNames.Contains("OnAnimatorIK") && !callerNames.Contains("UpdateStats") && !callerNames.Contains("RandomMovement"))
                 {
                     if (callerNames != lastCallerNames)
                     {
