@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Use_Equipment_in_Water
 {
-    [BepInPlugin("com.lvh-it.valheim.useequipmentinwater", "Use Equipment in Water", "0.2.2.2")]
+    [BepInPlugin("com.lvh-it.valheim.useequipmentinwater", "Use Equipment in Water", "0.2.3")]
     [BepInProcess("valheim.exe")]
     [BepInProcess("valheim.x86_64")]
     class UseEquipmentInWater : BaseUnityPlugin
