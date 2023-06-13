@@ -74,7 +74,7 @@ namespace Use_Equipment_in_Water
         //
         //static string lastCallerNames = "";
 
-        [HarmonyPatch(typeof(Character), "IsSwiming")]
+        [HarmonyPatch(typeof(Character), "IsSwimming")]
         [HarmonyPrefix]
         static bool patchIsSwim(ref bool __result, Humanoid __instance, float ___m_swimTimer)
         {
