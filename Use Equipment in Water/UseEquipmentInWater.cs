@@ -3,11 +3,13 @@ using BepInEx.Configuration;
 //using BepInEx.Logging;
 using HarmonyLib;
 using System.Collections.Generic;
+using static ClutterSystem;
+using static PrivilegeManager;
 //using UnityEngine;
 
 namespace Use_Equipment_in_Water
 {
-    [BepInPlugin("com.lvh-it.valheim.useequipmentinwater", "Use Equipment in Water", "0.2.3")]
+    [BepInPlugin("com.lvh-it.valheim.useequipmentinwater", "Use Equipment in Water", "0.2.4")]
     [BepInProcess("valheim.exe")]
     [BepInProcess("valheim.x86_64")]
     class UseEquipmentInWater : BaseUnityPlugin
@@ -74,7 +76,7 @@ namespace Use_Equipment_in_Water
         //
         //static string lastCallerNames = "";
 
-        [HarmonyPatch(typeof(Character), "IsSwiming")]
+        [HarmonyPatch(typeof(Character), "IsSwimming")]
         [HarmonyPrefix]
         static bool patchIsSwim(ref bool __result, Humanoid __instance, float ___m_swimTimer)
         {
@@ -101,6 +103,8 @@ namespace Use_Equipment_in_Water
 
                 if (__instance.IsPlayer() && (callerNames.Contains("UpdateEquipment") || callerNames.Contains("EquipItem")))
                 {
+                    /*
+                     * Doesn't work for now since GetRightItem() and GetLeftItem() became protected in latest game patch -> cant call them
                     if (
                        (__instance.GetRightItem() != null && deniedItems.Contains(__instance.GetRightItem().m_shared.m_name))
                     || (__instance.GetLeftItem() != null && deniedItems.Contains(__instance.GetLeftItem().m_shared.m_name))
@@ -110,7 +114,7 @@ namespace Use_Equipment_in_Water
                         {
                             __instance.HideHandItems();
                         }
-                    }
+                    }*/
                     __result = false;
                     return false;
                 }
